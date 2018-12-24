@@ -9,7 +9,12 @@ namespace LogonEventsWatcherService
     public static class Constants
     {
         public const String ManagementConnectionString = @"\\127.0.0.1\root\cimv2";
-        public const String ManagementQuery = "SELECT * FROM __InstanceCreationEvent WITHIN 1 WHERE TargetInstance isa \"Win32_NTLogEvent\" AND (TargetInstance.EventCode = '4624' OR TargetInstance.EventCode = '4634') ";
+        public const String ManagementQuery = "SELECT * FROM __InstanceCreationEvent WITHIN 1 WHERE TargetInstance isa \"Win32_NTLogEvent\" AND (TargetInstance.EventCode = '4624' OR TargetInstance.EventCode = '4634')";
+
+        //ManagementObjectSearcher searcher =
+        ////          new ManagementObjectSearcher("root\\CIMV2",
+        //public const String ManagementQuery = "SELECT * FROM Win32_NTLogEvent WHERE EventCode=4624 OR EventCode=4634 AND Logfile='Security'";
+
 
         public const int LogonEventCode = 4624;
         public const int LogoffEventCode = 4634;
@@ -31,5 +36,7 @@ namespace LogonEventsWatcherService
         public const String Publisher = "ad";
 
         public const String DataFile = "LogonEventsWatcherService.xml";
+
+        public const String WindowManager = "Window Manager";
     }
 }
