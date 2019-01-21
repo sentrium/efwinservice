@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.Diagnostics;
 using System.Linq;
+using System.Management;
 using System.ServiceProcess;
 using System.Threading.Tasks;
 
@@ -22,8 +23,13 @@ namespace LogonEventsWatcherService
         {
             try
             {
+                //Configuration.ConfigurationUI configurationWindow = new Configuration.ConfigurationUI(serviceInstaller.ServiceName);
+                //configurationWindow.ShowDialog();
+
+
                 using (ServiceController sc = new ServiceController(serviceInstaller.ServiceName, Environment.MachineName))
                 {
+                    
                     if (sc.Status != ServiceControllerStatus.Running)
                         sc.Start();
                 }
@@ -42,6 +48,31 @@ namespace LogonEventsWatcherService
                 {
                     SetRecoveryOptions(sc.ServiceName);
                 }
+            }
+            catch (Exception e1)
+            {
+                EventLog.WriteEntry("Application", e1.ToString(), EventLogEntryType.Error);
+                return;
+            }
+        }
+        private void ServiceInstaller_AfterRollback(object sender, System.Configuration.Install.InstallEventArgs e)
+        {
+            try
+
+               
+            {
+                //System.Diagnostics.Debugger.Launch();
+                //using (ServiceController sc = new ServiceController(serviceInstaller.ServiceName))
+                //{
+                //    if (sc.Status != ServiceControllerStatus.Stopped)
+                //    {
+                //        sc.WaitForStatus(ServiceControllerStatus.Running);
+                //        sc.Stop();
+                //    }
+                        
+
+                    
+                //}
             }
             catch (Exception e1)
             {

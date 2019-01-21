@@ -33,7 +33,7 @@
             // 
             // serviceProcessInstaller
             // 
-            this.serviceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalService;
+            this.serviceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.serviceProcessInstaller.Password = null;
             this.serviceProcessInstaller.Username = null;
             // 
@@ -45,6 +45,8 @@
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             this.serviceInstaller.Committed += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_Committed);
             this.serviceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall);
+            this.serviceInstaller.BeforeUninstall += new System.Configuration.Install.InstallEventHandler(this.ServiceInstaller_AfterRollback);
+            //this.serviceInstaller. += new System.Configuration.Install.InstallEventHandler(this.ServiceInstaller_AfterRollback);
             // 
             // ProjectInstaller
             // 
@@ -53,6 +55,8 @@
             this.serviceInstaller});
 
         }
+
+        
 
         #endregion
 

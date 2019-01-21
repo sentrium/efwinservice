@@ -21,7 +21,7 @@ namespace LogonEventsWatcherService
 
         public Sender()
         {
-            backgroundWorker.DoWork += doWork;
+            backgroundWorker.DoWork += DoWork;
             backgroundWorker.WorkerSupportsCancellation = true;
         }
 
@@ -40,7 +40,7 @@ namespace LogonEventsWatcherService
             Logger.Log.Info("Sender stopped");
         }
 
-        private void doWork(object sender, DoWorkEventArgs e)
+        private void DoWork(object sender, DoWorkEventArgs e)
         {
             Logger.Log.Info("Sender do work");
             while (!e.Cancel)
@@ -78,18 +78,20 @@ namespace LogonEventsWatcherService
 
                 var requestData = new RequestData()
                 {
-                    id = Guid.NewGuid().ToString(),
-                    type = eventData.EventCode == Constants.LogonEventCode ?
+                    ID = Guid.NewGuid().ToString(),
+                    Type = eventData.EventCode == Constants.LogonEventCode ?
                         Constants.AdUserLogin : Constants.AdUserLogout,
-                    timestamp = eventData.TimeGenerated.ToOADate(),
-                    publisher = Constants.Publisher,
-                    payload = new Payload()
+                    TimeStamp = (eventData.TimeGenerated.ToUniversalTime().Subtract(new DateTime(1970, 1, 1))).TotalSeconds,
+                    
+                    Publisher = Constants.Publisher,
+                    Payload = new Payload()
                     {
-                        mac = computerData.Mac,
-                        extension = userData.Extension,
-                        pc = eventData.ComputerName,
-                        domain = eventData.DomainName,
-                        username = eventData.AccountName
+                        Mac = computerData.Mac,
+                        
+                        Extension = userData.Extension,
+                        PC = eventData.ComputerName,
+                        Domain = eventData.DomainName,
+                        Username = eventData.AccountName
                     }
                 };
 
@@ -98,7 +100,7 @@ namespace LogonEventsWatcherService
                 var request = WebRequest.Create(ConfigurationManager.AppSettings["TargetWebServiceUrl"]);
                 request.ContentType = "application/json";
                 request.Method = "POST";
-
+                request.Headers.Add("Authorization", "Bearer " + ConfigurationManager.AppSettings["AuthToken"]);
                 using (var streamWriter = new StreamWriter(request.GetRequestStream()))
                 {
                     streamWriter.Write(json);
