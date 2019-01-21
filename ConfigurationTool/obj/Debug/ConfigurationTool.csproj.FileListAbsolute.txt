@@ -17,3 +17,13 @@ C:\Users\administrator\Desktop\Repos\efwinservice\ConfigurationTool\obj\Debug\Co
 C:\Users\administrator\Desktop\Repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.exe
 C:\Users\administrator\Desktop\Repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.pdb
 C:\Users\administrator\Desktop\Repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csprojAssemblyReference.cache
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.exe.config
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.exe
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.pdb
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csprojAssemblyReference.cache
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.ConfigurationUI.resources
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.Properties.Resources.resources
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.GenerateResource.cache
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.CoreCompileInputs.cache
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.exe
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.pdb
