@@ -1,0 +1,10 @@
+C:\Repos\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.exe.config
+C:\Repos\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.exe
+C:\Repos\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.pdb
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.ConfigurationUI.resources
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.Properties.Resources.resources
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csproj.GenerateResource.cache
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csproj.CoreCompileInputs.cache
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.exe
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.pdb
+C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csprojAssemblyReference.cache
