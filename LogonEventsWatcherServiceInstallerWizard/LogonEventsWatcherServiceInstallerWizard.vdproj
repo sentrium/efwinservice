@@ -21,19 +21,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_203B96E137FB013705A8436DF0015B77"
+        "MsmKey" = "8:_2906264B15C6ECB7DEFE47C6D8C1DE21"
         "OwnerKey" = "8:_113F69E33B014964860D891BFDA554B3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_44A6BAD5CF3349CF87FA52BC916CFBC5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4662CB6B755C4FC687410FC2B82F47D3"
+        "MsmKey" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -52,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_60086CC683EE346D88C85559DB75D1C4"
-        "OwnerKey" = "8:_44A6BAD5CF3349CF87FA52BC916CFBC5"
+        "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_60086CC683EE346D88C85559DB75D1C4"
-        "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
+        "OwnerKey" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -81,31 +75,37 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AB4F207CAEF348D8B908E908FDDC82E1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B2AE6E5675689280AE7840E62B1D918B"
         "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B8853AEF9DF2B6AFF765E77250345806"
-        "OwnerKey" = "8:_113F69E33B014964860D891BFDA554B3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+        "MsmKey" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC5DE72FC9DF4109A744FEBD5B65B7DD"
+        "MsmKey" = "8:_E38809B735C07F698B6987BCB70F493A"
+        "OwnerKey" = "8:_113F69E33B014964860D891BFDA554B3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E5C06C1670854258888FD54919F25770"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F5626B2564C84439B0A536DE02E890F2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FF85C0E600AD432B8C25A33B0FA3EE2B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -113,6 +113,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_113F69E33B014964860D891BFDA554B3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,25 +148,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_44A6BAD5CF3349CF87FA52BC916CFBC5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_60086CC683EE346D88C85559DB75D1C4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B8853AEF9DF2B6AFF765E77250345806"
+        "OwnerKey" = "8:_E38809B735C07F698B6987BCB70F493A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_203B96E137FB013705A8436DF0015B77"
+        "OwnerKey" = "8:_2906264B15C6ECB7DEFE47C6D8C1DE21"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -244,8 +244,22 @@
             "InstallAction" = "3:2"
             "Arguments" = "8:"
             "EntryPoint" = "8:"
-            "Sequence" = "3:2"
+            "Sequence" = "3:1"
             "Identifier" = "8:_88E8EE82_25A8_4AD7_B04D_806047254DE0"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_32006C692A6F4E07812C59EED42C11EE"
+            {
+            "Name" = "8:Primary output from ConfigurationTool (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:2"
+            "Identifier" = "8:_4BA2C984_BB4F_44C2_92B3_E70765BB19D4"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -291,20 +305,6 @@
             "InstallerClass" = "11:TRUE"
             "CustomActionData" = "8:"
             }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_ED92867E6CD6440DAEF466B78E805C57"
-            {
-            "Name" = "8:Primary output from ConfigurationTool (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_44A6BAD5CF3349CF87FA52BC916CFBC5"
-            "FileType" = "3:2"
-            "InstallAction" = "3:2"
-            "Arguments" = "8:LogonEventsWatcherService"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_97788DF4_D4B4_4BB6_9323_22077B2EB773"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
         }
         "DefaultFeature"
         {
@@ -328,14 +328,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_203B96E137FB013705A8436DF0015B77"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2906264B15C6ECB7DEFE47C6D8C1DE21"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_203B96E137FB013705A8436DF0015B77"
+                    "_2906264B15C6ECB7DEFE47C6D8C1DE21"
                     {
                     "Name" = "8:log4net.dll"
                     "Attributes" = "3:512"
@@ -359,12 +359,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4662CB6B755C4FC687410FC2B82F47D3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_30E20A7D2A6D4C0BA84188EB58A5067A"
             {
-            "SourcePath" = "8:..\\..\\..\\New folder (2)\\Windows Events Forwarding Server.ps1"
-            "TargetName" = "8:Windows Events Forwarding Server.ps1"
+            "SourcePath" = "8:..\\Resources\\logo_flat.png"
+            "TargetName" = "8:logo_flat.png"
             "Tag" = "8:"
-            "Folder" = "8:_AA8A7B6EE2104B72B8FC2B5C8786EB3C"
+            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -472,26 +472,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB4F207CAEF348D8B908E908FDDC82E1"
-            {
-            "SourcePath" = "8:..\\..\\..\\New folder (2)\\EnableWinRM.ps1"
-            "TargetName" = "8:EnableWinRM.ps1"
-            "Tag" = "8:"
-            "Folder" = "8:_AA8A7B6EE2104B72B8FC2B5C8786EB3C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B2AE6E5675689280AE7840E62B1D918B"
             {
             "AssemblyRegister" = "3:1"
@@ -523,14 +503,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8853AEF9DF2B6AFF765E77250345806"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E38809B735C07F698B6987BCB70F493A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B8853AEF9DF2B6AFF765E77250345806"
+                    "_E38809B735C07F698B6987BCB70F493A"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
@@ -554,12 +534,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D15ED5DF28D643CEA9B565FB335E278F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E5C06C1670854258888FD54919F25770"
             {
-            "SourcePath" = "8:..\\..\\..\\logo_flat.png"
-            "TargetName" = "8:logo_flat.png"
+            "SourcePath" = "8:..\\Resources\\Windows Events Forwarding Server.ps1"
+            "TargetName" = "8:Windows Events Forwarding Server.ps1"
             "Tag" = "8:"
-            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
+            "Folder" = "8:_AA8A7B6EE2104B72B8FC2B5C8786EB3C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -574,9 +554,29 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC5DE72FC9DF4109A744FEBD5B65B7DD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5626B2564C84439B0A536DE02E890F2"
             {
-            "SourcePath" = "8:..\\..\\..\\New folder (2)\\logo-flat.ico"
+            "SourcePath" = "8:..\\Resources\\EnableWinRM.ps1"
+            "TargetName" = "8:EnableWinRM.ps1"
+            "Tag" = "8:"
+            "Folder" = "8:_AA8A7B6EE2104B72B8FC2B5C8786EB3C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF85C0E600AD432B8C25A33B0FA3EE2B"
+            {
+            "SourcePath" = "8:..\\Resources\\logo-flat.ico"
             "TargetName" = "8:logo-flat.ico"
             "Tag" = "8:"
             "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
@@ -662,7 +662,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Logon Events Watcher Service"
         "ProductCode" = "8:{0BD909CA-7C33-43B9-80CC-2D999133DDC2}"
-        "PackageCode" = "8:{6795AC5D-0889-49B1-B034-E5511DC8AC7C}"
+        "PackageCode" = "8:{4BD14AC3-D7F7-4758-B943-BE48D217C3BD}"
         "UpgradeCode" = "8:{94133454-E8C5-4AB7-B300-D590ACBA9FF1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -679,7 +679,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_EC5DE72FC9DF4109A744FEBD5B65B7DD"
+        "ARPPRODUCTICON" = "8:_FF85C0E600AD432B8C25A33B0FA3EE2B"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -810,7 +810,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "UpdateText"
@@ -1031,7 +1031,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -1076,7 +1076,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "BannerText"
@@ -1333,7 +1333,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -1382,7 +1382,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "InstallAllUsersVisible"
@@ -1418,7 +1418,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_D15ED5DF28D643CEA9B565FB335E278F"
+                            "Value" = "8:_30E20A7D2A6D4C0BA84188EB58A5067A"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -1471,34 +1471,6 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_44A6BAD5CF3349CF87FA52BC916CFBC5"
-            {
-            "SourcePath" = "8:..\\ConfigurationTool\\obj\\Debug\\ConfigurationTool.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{1C9BCA88-C078-41AD-B39D-BA6E3817260D}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8950583F23954E61BDB8B11E7BDAD156"
             {
             "SourcePath" = "8:..\\PSScriptsExecuter\\obj\\Debug\\PSScriptsExecuter.exe"
@@ -1522,6 +1494,34 @@
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{9B82089C-F8EB-4033-9519-7D212F39A027}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
+            {
+            "SourcePath" = "8:..\\ConfigurationTool\\obj\\Debug\\ConfigurationTool.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{1C9BCA88-C078-41AD-B39D-BA6E3817260D}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
