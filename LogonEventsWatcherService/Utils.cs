@@ -11,8 +11,7 @@ namespace LogonEventsWatcherService
     {
         public static String FormatStackTrace(StackTrace st)
         {
-            String result = st.GetFrame(0).GetMethod().ReflectedType.ToString() + "."
-                + st.GetFrame(0).GetMethod().Name;
+            String result = $"{st.GetFrame(0).GetMethod().ReflectedType.ToString()}.{st.GetFrame(0).GetMethod().Name}";
             return result;
         }
     }

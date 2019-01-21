@@ -10,19 +10,19 @@ namespace LogonEventsWatcherService.Models
     [JsonObject]
     class Payload
     {
-        [JsonProperty]
-        public String mac;
+        [Newtonsoft.Json.JsonProperty("mac")]
+        public String Mac;
 
-        [JsonProperty]
-        public String extension;
+        [Newtonsoft.Json.JsonProperty("extension")]
+        public String Extension;
 
-        [JsonProperty]
-        public String pc;
+        [Newtonsoft.Json.JsonProperty("pc")]
+        public String PC;
 
-        [JsonProperty]
-        public String domain;
+        [Newtonsoft.Json.JsonProperty("domain")]
+        public String Domain;
 
-        [JsonProperty]
-        public String username;
+        [Newtonsoft.Json.JsonProperty("username")]
+        public String Username;
     }
 }

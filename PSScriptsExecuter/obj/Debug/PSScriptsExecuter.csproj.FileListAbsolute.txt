@@ -1,0 +1,9 @@
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\bin\Debug\PSScriptsExecuter.exe.config
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\bin\Debug\PSScriptsExecuter.exe
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\bin\Debug\PSScriptsExecuter.pdb
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\bin\Debug\System.Management.Automation.dll
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csproj.CoreCompileInputs.cache
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csproj.CopyComplete
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.exe
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.pdb
+C:\Users\administrator\Desktop\Repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csprojAssemblyReference.cache

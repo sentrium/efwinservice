@@ -22,7 +22,7 @@ namespace LogonEventsWatcherService
             {
                 string fileName = Path.Combine(Path.GetTempPath(), Constants.DataFile);
 
-                Logger.Log.Info("Cache serialization, file: " + fileName);
+                Logger.Log.Info($"Cache serialization, file: {fileName}");
 
                 using (Stream stream = File.Open(Constants.DataFile, FileMode.Create))
                 {
@@ -33,7 +33,7 @@ namespace LogonEventsWatcherService
             }
             catch (Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                Logger.Log.Error($"{Utils.FormatStackTrace(new StackTrace())} : {ex.Message}");
             }
         }
 
@@ -43,7 +43,7 @@ namespace LogonEventsWatcherService
             {                
                 string fileName = Path.Combine(Path.GetTempPath(), Constants.DataFile);
 
-                Logger.Log.Info("Cache deserialization, file: " + fileName);
+                Logger.Log.Info($"Cache deserialization, file: {fileName}");
 
                 if (File.Exists(fileName))
                 {
@@ -61,7 +61,7 @@ namespace LogonEventsWatcherService
             }
             catch (Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                Logger.Log.Error($"{Utils.FormatStackTrace(new StackTrace())} : {ex.Message}");
             }
         }
     }

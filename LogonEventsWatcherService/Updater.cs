@@ -14,7 +14,7 @@ namespace LogonEventsWatcherService
 {
     class Updater
     {
-        private Timer timer;
+        private Timer _timer;
     
  
         public void Start()
@@ -22,18 +22,19 @@ namespace LogonEventsWatcherService
             //Cache.Deserialize();
             QueryLdap();
 
-            timer = new Timer(int.Parse(ConfigurationManager.AppSettings["LdapQueryInterval"]) * 1000);
-            timer.AutoReset = true;
-            timer.Elapsed += new ElapsedEventHandler(timer_elasped);
-            timer.Start();
+            _timer = new Timer(int.Parse(ConfigurationManager.AppSettings["LdapQueryInterval"]) * 1000);
+            _timer.AutoReset = true;
+            _timer.Elapsed += new ElapsedEventHandler(timer_elasped);
+            _timer.Start();
 
-            Logger.Log.Info("Updater started, inverval (sec): " + ConfigurationManager.AppSettings["LdapQueryInterval"]);
+            //Logger.Log.Info("Updater started, inverval (sec): " + ConfigurationManager.AppSettings["LdapQueryInterval"]);
+            Logger.Log.Info($"Updater started, inverval (sec): {ConfigurationManager.AppSettings["LdapQueryInterval"]}");
         }
 
         public void Stop()
         {
-            timer.Stop();
-            timer = null;
+            _timer.Stop();
+            _timer = null;
 
             //Cache.Serialize();
 
@@ -47,7 +48,7 @@ namespace LogonEventsWatcherService
 
         private void QueryLdap()
         {
-            Logger.Log.Info("Updater perform ldap query, path: " + ConfigurationManager.AppSettings["LdapPath"]);
+            Logger.Log.Info($"Updater perform ldap query, path: {ConfigurationManager.AppSettings["LdapPath"]}");
 
             QueryUserData();
 
@@ -66,8 +67,8 @@ namespace LogonEventsWatcherService
 
                 searchResults = directorySearcher.FindAll();
 
-                String accountName = "";
-                String extension = "";
+                String accountName = string.Empty;
+                String extension = string.Empty;
 
                 foreach (SearchResult searchResult in searchResults)
                 {
@@ -79,7 +80,7 @@ namespace LogonEventsWatcherService
 
                     var extensionProp = userEntry.Properties["ipPhone"];
                     if (extensionProp != null)
-                        extension = extensionProp.Value == null ? "" : extensionProp.Value.ToString();
+                        extension = extensionProp.Value == null ? string.Empty : extensionProp.Value.ToString();
 
                     //Logger.Log.Info("Updater. Found user: " + accountName + ", extension: " + extension);
 
@@ -89,7 +90,7 @@ namespace LogonEventsWatcherService
                         {
                             UserData userData = new UserData();
                             Cache.UserData.Add(accountName, userData);
-                            Logger.Log.Info("Updater. Add new user data for user: " + accountName);
+                            Logger.Log.Info($"Updater. Add new user data for user: {accountName}");
                         }
                 
                         Cache.UserData[accountName].AccountName = accountName;
@@ -99,7 +100,7 @@ namespace LogonEventsWatcherService
             }
             catch (Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                Logger.Log.Error($"{Utils.FormatStackTrace(new StackTrace())} :  {ex.Message}");
             }
             finally
             {
@@ -120,8 +121,8 @@ namespace LogonEventsWatcherService
 
                 searchResults = directorySearcher.FindAll();
 
-                String computerName = "";
-                String mac = "";
+                String computerName = string.Empty;
+                String mac = string.Empty;
                 foreach (SearchResult searchResult in searchResults)
                 {
                     var computerEntry = searchResult.GetDirectoryEntry();
@@ -133,7 +134,7 @@ namespace LogonEventsWatcherService
 
                     var macProp = computerEntry.Properties["msNPCallingStationID"];
                     if (macProp != null)
-                        mac = macProp.Value == null ? "" : macProp.Value.ToString();
+                        mac = macProp.Value == null ? string.Empty : macProp.Value.ToString();
 
 
                     //Logger.Log.Info("Updater. Found computer: " + computerName + ", mac: " + mac);
@@ -144,7 +145,7 @@ namespace LogonEventsWatcherService
                         {
                             ComputerData computerData = new ComputerData();
                             Cache.ComputerData.Add(computerName, computerData);
-                            Logger.Log.Info("Updater. Add new computer data for computer: " + computerName);
+                            Logger.Log.Info($"Updater. Add new computer data for computer: {computerName}");
                         }
                         Cache.ComputerData[computerName].ComputerName = computerName;
                         Cache.ComputerData[computerName].Mac = mac;
@@ -153,7 +154,7 @@ namespace LogonEventsWatcherService
             }
             catch (Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                Logger.Log.Error($"{Utils.FormatStackTrace(new StackTrace())} : {ex.Message}");
             }
             finally
             {

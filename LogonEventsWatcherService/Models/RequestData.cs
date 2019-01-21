@@ -10,20 +10,20 @@ namespace LogonEventsWatcherService.Models
     [JsonObject]
     class RequestData
     {
-        [JsonProperty]
-        public String id;
+        [Newtonsoft.Json.JsonProperty("id")]
+        public String ID;
 
-        [JsonProperty]
-        public String type;
+        [Newtonsoft.Json.JsonProperty("type")]
+        public String Type;
 
-        [JsonProperty]
-        public Double timestamp;
+        [Newtonsoft.Json.JsonProperty("timestamp")]
+        public Double TimeStamp;
 
-        [JsonProperty]
-        public String publisher;
+        [Newtonsoft.Json.JsonProperty("publisher")]
+        public String Publisher;
 
-        [JsonProperty]
-        public Payload payload;
+        [Newtonsoft.Json.JsonProperty("payload")]
+        public Payload Payload;
 
     }
 }
