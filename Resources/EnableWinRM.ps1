@@ -10,7 +10,7 @@ $defaultNC     = ( [ADSI]"LDAP://RootDSE" ).defaultNamingContext.Value
 $GPO = New-GPO -Name $GPOName
 
 
-Set-GPRegistryValue -Name $GPOName -Key $KeyPath -ValueName "AllowAutoConfig" -Type String -Value "1"
+Set-GPRegistryValue -Name $GPOName -Key $KeyPath -ValueName "AllowAutoConfig" -Type DWORD -Value 1
 Set-GPRegistryValue -Name $GPOName -Key $KeyPath -ValueName "IPv4Filter" -Type String -Value "*"
 Set-GPRegistryValue -Name $GPOName -Key $KeyPath -ValueName "IPv6Filter" -Type String -Value "*"
 
