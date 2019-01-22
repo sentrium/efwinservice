@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4A42E1D885E2D130BC61FBBD0D12F78E"
+        "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_60014131328EF7F1894E74B706F424B4"
         "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,19 +70,13 @@
         "Entry"
         {
         "MsmKey" = "8:_7673FF5C1FFDF2F63D1653945717ADF4"
-        "OwnerKey" = "8:_B2AE6E5675689280AE7840E62B1D918B"
+        "OwnerKey" = "8:_4A42E1D885E2D130BC61FBBD0D12F78E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B2AE6E5675689280AE7840E62B1D918B"
-        "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,12 +118,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7673FF5C1FFDF2F63D1653945717ADF4"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -136,13 +130,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8950583F23954E61BDB8B11E7BDAD156"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B2AE6E5675689280AE7840E62B1D918B"
+        "OwnerKey" = "8:_4A42E1D885E2D130BC61FBBD0D12F78E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -256,7 +256,7 @@
             "Object" = "8:_D0D9F5B10BEB4664ABB3F0ABEA5D3814"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
-            "Arguments" = "8:"
+            "Arguments" = "8:LogonEventsWatcherService"
             "EntryPoint" = "8:"
             "Sequence" = "3:2"
             "Identifier" = "8:_4BA2C984_BB4F_44C2_92B3_E70765BB19D4"
@@ -379,6 +379,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4A42E1D885E2D130BC61FBBD0D12F78E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4A42E1D885E2D130BC61FBBD0D12F78E"
+                    {
+                    "Name" = "8:System.Management.Automation.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Management.Automation.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_60014131328EF7F1894E74B706F424B4"
             {
             "AssemblyRegister" = "3:1"
@@ -455,37 +486,6 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Management.Infrastructure.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B2AE6E5675689280AE7840E62B1D918B"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_B2AE6E5675689280AE7840E62B1D918B"
-                    {
-                    "Name" = "8:System.Management.Automation.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Management.Automation.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FBF7E398795E4608A1A081DD32835A41"
