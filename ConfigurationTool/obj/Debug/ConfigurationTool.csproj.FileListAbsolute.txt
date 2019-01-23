@@ -26,4 +26,3 @@ C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\Con
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.CoreCompileInputs.cache
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.exe
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.pdb
-C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csprojAssemblyReference.cache

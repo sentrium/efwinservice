@@ -100,6 +100,7 @@ namespace ConfigurationTool
             xmlDocument.Save(GetServiceConfigFilePath());
 
             ServiceController sc = new ServiceController(this._serviceName);
+            sc.WaitForStatus(ServiceControllerStatus.Running);
             if (sc.Status == ServiceControllerStatus.Running)
             {
                 sc.Stop();

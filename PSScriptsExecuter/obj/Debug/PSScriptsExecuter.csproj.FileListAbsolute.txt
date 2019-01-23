@@ -15,4 +15,3 @@ C:\Users\administrator\source\repos\efwinservice\PSScriptsExecuter\obj\Debug\PSS
 C:\Users\administrator\source\repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csproj.CopyComplete
 C:\Users\administrator\source\repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.exe
 C:\Users\administrator\source\repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.pdb
-C:\Users\administrator\source\repos\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csprojAssemblyReference.cache

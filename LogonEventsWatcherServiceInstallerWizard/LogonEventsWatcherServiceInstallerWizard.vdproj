@@ -662,7 +662,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Logon Events Watcher Service"
         "ProductCode" = "8:{0BD909CA-7C33-43B9-80CC-2D999133DDC2}"
-        "PackageCode" = "8:{4BD14AC3-D7F7-4758-B943-BE48D217C3BD}"
+        "PackageCode" = "8:{089A9A23-410D-4FEB-AEC5-96C53C1B0444}"
         "UpgradeCode" = "8:{94133454-E8C5-4AB7-B300-D590ACBA9FF1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
