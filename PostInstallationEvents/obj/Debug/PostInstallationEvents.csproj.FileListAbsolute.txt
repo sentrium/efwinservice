@@ -1,0 +1,14 @@
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\bin\Debug\PostInstallationEvents.dll
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\bin\Debug\PostInstallationEvents.pdb
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.csproj.CoreCompileInputs.cache
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.dll
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.pdb
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.csprojAssemblyReference.cache
+C:\GitRepositories\efwinservice\PostInstallationEvents\bin\Debug\PostInstallationEvents.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\bin\Debug\PostInstallationEvents.pdb
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.csproj.CoreCompileInputs.cache
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.pdb
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\Interop.NetFwTypeLib.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.csproj.ResolveComReference.cache
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\Debug\PostInstallationEvents.csprojAssemblyReference.cache

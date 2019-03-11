@@ -1,0 +1,5 @@
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\bin\x64\Debug\PostInstallationEvents.dll
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\bin\x64\Debug\PostInstallationEvents.pdb
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\x64\Debug\PostInstallationEvents.csproj.CoreCompileInputs.cache
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\x64\Debug\PostInstallationEvents.dll
+C:\Users\administrator\source\repos\efwinservice\PostInstallationEvents\obj\x64\Debug\PostInstallationEvents.pdb

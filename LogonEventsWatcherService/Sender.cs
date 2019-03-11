@@ -48,8 +48,8 @@ namespace LogonEventsWatcherService
                 EventData eventData = Queue.Dequeue();
                 if (eventData != null)
                 {
-                    String logString = String.Format("Sender. Dequeue event code: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
-                        eventData.EventCode, eventData.AccountName,eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
+                    String logString = String.Format("Sender. Dequeue action: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
+                        eventData.ActionName, eventData.AccountName,eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
                     Logger.Log.Info(logString);
                     Logger.Log.Info("Sender. Queue count: " + Queue.Count.ToString());
 
@@ -79,7 +79,7 @@ namespace LogonEventsWatcherService
                 var requestData = new RequestData()
                 {
                     ID = Guid.NewGuid().ToString(),
-                    Type = eventData.EventCode == Constants.LogonEventCode ?
+                    Type = eventData.ActionName.Equals("logon",StringComparison.InvariantCultureIgnoreCase) ?
                         Constants.AdUserLogin : Constants.AdUserLogout,
                     TimeStamp = (eventData.TimeGenerated.ToUniversalTime().Subtract(new DateTime(1970, 1, 1))).TotalSeconds,
                     

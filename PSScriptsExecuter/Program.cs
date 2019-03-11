@@ -17,12 +17,11 @@ namespace PSScriptsExecuter
             
             using (PowerShell powershell = PowerShell.Create())
             {
-                
                 PSCommand new1 = new PSCommand();
                 
                 GetPSScriptsFilesPaths().ForEach(path =>
                 {
-                    powershell.AddScript(@System.IO.File.ReadAllText(path));
+                    powershell.AddScript(@System.IO.File.ReadAllText(path).Replace("rootDirectoryPlaceHolder", @"C:\Program Files\Logon Events Watcher Service"));
 
                     Collection<PSObject> results = powershell.Invoke();
 
@@ -39,7 +38,7 @@ namespace PSScriptsExecuter
 
         static List<string> GetPSScriptsFilesPaths()
         {
-            var executingPath = $@"{ Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location)}\PS Scripts";
+            var executingPath = $@"C:\Program Files\Logon Events Watcher Service\PS Scripts";
 
             return Directory.GetFiles(executingPath).ToList();
         }

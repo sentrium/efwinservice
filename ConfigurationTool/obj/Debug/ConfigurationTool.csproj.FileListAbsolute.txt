@@ -26,3 +26,14 @@ C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\Con
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.CoreCompileInputs.cache
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.exe
 C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.pdb
+C:\Users\administrator\source\repos\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csprojAssemblyReference.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.exe.config
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.exe
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Debug\ConfigurationTool.pdb
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.ConfigurationUI.resources
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.Properties.Resources.resources
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.GenerateResource.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csproj.CoreCompileInputs.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.exe
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.pdb
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Debug\ConfigurationTool.csprojAssemblyReference.cache

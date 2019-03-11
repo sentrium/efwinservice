@@ -38,6 +38,8 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtToken = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtServicePort = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(381, 161);
+            this.btnSave.Location = new System.Drawing.Point(381, 206);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 4;
@@ -104,11 +106,29 @@
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Token";
-    
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Service Port";
+            // 
+            // txtServicePort
+            // 
+            this.txtServicePort.Location = new System.Drawing.Point(107, 164);
+            this.txtServicePort.Name = "txtServicePort";
+            this.txtServicePort.Size = new System.Drawing.Size(349, 20);
+            this.txtServicePort.TabIndex = 7;
+            this.txtServicePort.Text = "8733";
             // 
             // ConfigurationUI
             // 
-            this.ClientSize = new System.Drawing.Size(481, 196);
+            this.ClientSize = new System.Drawing.Size(481, 241);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtServicePort);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtToken);
             this.Controls.Add(this.btnSave);
@@ -138,6 +158,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtToken;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtServicePort;
     }
 }
 

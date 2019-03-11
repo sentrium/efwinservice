@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Management;
 using System.Net.NetworkInformation;
 using System.ServiceProcess;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -55,7 +57,11 @@ namespace ConfigurationTool
                 errorProvider.SetError(txtToken, "Please give Ldap Path.");
                 return;
             }
-
+            if (!IsValidPortNumber(txtServicePort.Text))
+            {
+                errorProvider.SetError(txtServicePort, "Please give valid port number.");
+                return;
+            }
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(GetServiceConfigFilePath());
 
@@ -93,6 +99,10 @@ namespace ConfigurationTool
                             }
                         }
                     }
+                    if (attribute.Name == "baseAddress")
+                    {
+                        attribute.Value = $"http://localhost:{txtServicePort.Text}/Design_Time_Addresses/LogonEventsWatcherService.WindowsEventWCFService/EventWCFService/";
+                    }
                 }
 
             }
@@ -110,7 +120,13 @@ namespace ConfigurationTool
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-        
+
+        private bool IsValidPortNumber(string portNumber)
+        {
+            var result = Regex.Match(portNumber, "^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$", RegexOptions.IgnoreCase);
+
+            return result.Success;
+        }
 
         string GetServiceConfigFilePath()
         {

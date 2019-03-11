@@ -16,10 +16,28 @@ namespace LogonEventsWatcherService
 {
     class Watcher
     {
+        private static Watcher _watcher = null;
+
+        public static Watcher Instance {
+            get {
+                if (_watcher == null)
+                    _watcher = new Watcher();
+
+                return _watcher;
+            }
+        }
+
+        private Watcher()
+        {
+
+
+        }
+
+
        // private ManagementEventWatcher managementEventWatcher;
         private Dictionary<String, int> previousEvents = new Dictionary<String, int>();
         private Dictionary<String, String> userComputers = new Dictionary<String, String>();
-        private Dictionary<String, String> userLogonIDs = new Dictionary<String, String>();
+        private Dictionary<String, Dictionary<String, String>> userLogonIDs = new Dictionary<String, Dictionary<String,String>>(StringComparer.InvariantCultureIgnoreCase);
 
         private Timer timer;
         private int LastIndex = -100;
@@ -43,9 +61,13 @@ namespace LogonEventsWatcherService
             timer = new Timer();
             timer.Elapsed += Timer_Elapsed;
             timer.Interval = int.Parse(ConfigurationManager.AppSettings["WatcherTimerInterval"]) * 1000;
-            timer.Start();
+            //timer.Start();
 
             Logger.Log.Info("Watcher started");
+        }
+        public void AddEventInQueue(Models.PSEventLogEntry entry)
+        {
+            ParseEventEntry(entry);
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -96,6 +118,83 @@ namespace LogonEventsWatcherService
                 ProcessManagementObject(mbo);
             }
         }
+        private void ParseEventEntry(PSEventLogEntry entry)
+        {
+            try
+            {
+                String accoutName = "";
+                String logonID = "";
+                String domainName = "";
+
+                if (entry.Action.Equals("logon",StringComparison.InvariantCultureIgnoreCase))
+                {
+                    accoutName = entry.Username;
+                    domainName = entry.UserDomain;
+                    logonID = string.Empty;//entry.ReplacementStrings[7];
+
+                    if (userLogonIDs.ContainsKey(accoutName) && userLogonIDs[accoutName].ContainsKey(entry.ComputerName))
+                    {
+                        return;
+                    }
+                    else if (!userLogonIDs.ContainsKey(accoutName))
+                    {
+                        userLogonIDs[accoutName] = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
+                    }
+                   
+                    userLogonIDs[accoutName].Add(entry.ComputerName, logonID);
+
+                }
+                else if (entry.Action.Equals("logoff",StringComparison.InvariantCultureIgnoreCase))
+                {
+                    accoutName = entry.Username;
+                    domainName = entry.UserDomain;
+                    logonID = string.Empty;//entry.ReplacementStrings[3];
+
+
+                    if (!userLogonIDs.ContainsKey(accoutName) || (userLogonIDs.ContainsKey(accoutName) && !userLogonIDs[accoutName].ContainsKey(entry.ComputerName)))
+                        return;
+
+                    if (userLogonIDs.ContainsKey(accoutName) && userLogonIDs[accoutName].ContainsKey(entry.ComputerName))
+                        userLogonIDs[accoutName].Remove(entry.ComputerName);
+
+
+                    var zombieUserNames = userLogonIDs.ToList().Where(x => x.Value.Count == 0).Select(x => x.Key).ToList();
+                    zombieUserNames.ForEach(name => userLogonIDs.Remove(name));
+
+                }
+
+                if (domainName == Constants.WindowManager)
+                    return;
+
+                EventData eventData = new EventData();
+                //eventData.EventCode = (int)entry.InstanceId;
+                eventData.ActionName = entry.Action;
+                eventData.TimeGenerated = DateTime.UtcNow;
+                eventData.AccountName = accoutName;
+                eventData.DomainName = domainName;
+                eventData.LogonID = logonID;
+                eventData.ComputerName = entry.ComputerName.Split('.')[0].ToUpper();
+
+                if (!String.IsNullOrEmpty(eventData.AccountName) && eventData.AccountName != Constants.System)
+                {
+                    if (String.IsNullOrEmpty(eventData.ComputerName) && userComputers.ContainsKey(eventData.AccountName))
+                        eventData.ComputerName = userComputers[eventData.AccountName];
+
+                    if (!String.IsNullOrEmpty(eventData.ComputerName))
+                    {
+                        String logString = String.Format("Watcher. Enqueue action: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
+                             eventData.ActionName, eventData.AccountName, eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
+                        Logger.Log.Info(logString);
+
+                        Queue.Enqueue(eventData);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+            }
+        }
 
         private void ParseEventEntry(dynamic entry)
         {
@@ -114,7 +213,7 @@ namespace LogonEventsWatcherService
                     if (userLogonIDs.ContainsKey(accoutName))
                         return;
 
-                    userLogonIDs.Add(accoutName, logonID);
+                    //userLogonIDs.Add(accoutName, logonID);
       
                 }
                 else if (entry.InstanceId == Constants.LogoffEventCode)
@@ -147,8 +246,8 @@ namespace LogonEventsWatcherService
 
                     if (!String.IsNullOrEmpty(eventData.ComputerName))
                     {
-                        String logString = String.Format("Watcher. Enqueue event code: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
-                             eventData.EventCode, eventData.AccountName, eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
+                        String logString = String.Format("Watcher. Enqueue action: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
+                             eventData.ActionName, eventData.AccountName, eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
                         Logger.Log.Info(logString);
 
                         Queue.Enqueue(eventData);
@@ -206,8 +305,8 @@ namespace LogonEventsWatcherService
                     //{
                         if (!String.IsNullOrEmpty(eventData.ComputerName))
                         {
-                            String logString = String.Format("Watcher. Enqueue event code: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
-                                 eventData.EventCode, eventData.AccountName, eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
+                            String logString = String.Format("Watcher. Enqueue action: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
+                                 eventData.ActionName, eventData.AccountName, eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
                             Logger.Log.Info(logString);
 
                             Queue.Enqueue(eventData);
@@ -255,7 +354,7 @@ namespace LogonEventsWatcherService
                         Logger.Log.Info("Watcher. Parsed logon: account:  " + eventData.AccountName 
                             + ", domain: " + eventData.DomainName +", logon ID: " + eventData.LogonID);
                        
-                        userLogonIDs.Add(eventData.AccountName, eventData.LogonID);
+                       // userLogonIDs.Add(eventData.AccountName, eventData.LogonID);
                   }
                     else if (parts[i] == Constants.WorkstationName)
                     {
@@ -308,8 +407,8 @@ namespace LogonEventsWatcherService
                         if (!userLogonIDs.ContainsKey(accountName))
                             return;
                                               
-                        if (logonID != userLogonIDs[accountName])
-                            return;
+                        //if (logonID != userLogonIDs[accountName])
+                        //    return;
 
                         eventData.AccountName = accountName;
                         eventData.DomainName = parts[i + 6];

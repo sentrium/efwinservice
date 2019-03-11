@@ -8,6 +8,7 @@ namespace LogonEventsWatcherService.Models
 {
     public class EventData
     {
+        public String ActionName { get; set; }
         public String AccountName { get; set; }
 
         public String ComputerName { get; set; }
