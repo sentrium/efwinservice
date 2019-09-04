@@ -169,7 +169,7 @@ namespace LogonEventsWatcherService
                 EventData eventData = new EventData();
                 //eventData.EventCode = (int)entry.InstanceId;
                 eventData.ActionName = entry.Action;
-                eventData.TimeGenerated = DateTime.UtcNow;
+                eventData.TimeGenerated = DateTime.Now;
                 eventData.AccountName = accoutName;
                 eventData.DomainName = domainName;
                 eventData.LogonID = logonID;

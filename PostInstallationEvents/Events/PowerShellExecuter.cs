@@ -31,12 +31,12 @@ namespace PostInstallationEvents.Events
                     Collection<PSObject> results = powershell.Invoke();
                 }
             });
-            if (this._createGPOs)
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = @"gpmc.msc";
-                process.Start();
-            }
+            //if (this._createGPOs)
+            //{
+            //    Process process = new Process();
+            //    process.StartInfo.FileName = @"gpmc.msc";
+            //    process.Start();
+            //}
         }
 
         List<string> GetPSScriptsFilesPaths()

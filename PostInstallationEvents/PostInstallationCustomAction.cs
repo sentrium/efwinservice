@@ -25,7 +25,7 @@ namespace PostInstallationEvents
             base.Commit(savedState);
 
             _installationDirectory = Directory.GetParent(this.Context.Parameters["assemblypath"]).FullName;
-            _createGPOs = this.Context.Parameters["creategpos"].Equals("1") ? true : false;
+            //_createGPOs = this.Context.Parameters["creategpos"].Equals("1") ? true : false;
 
             //
             var powerShellExecuter = new Events.PowerShellExecuter(_installationDirectory, _createGPOs);

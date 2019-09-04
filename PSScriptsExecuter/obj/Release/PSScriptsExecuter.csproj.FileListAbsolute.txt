@@ -1,0 +1,11 @@
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\PSScriptsExecuter.exe.config
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\PSScriptsExecuter.exe
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\PSScriptsExecuter.pdb
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\System.Management.Automation.dll
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\Microsoft.Management.Infrastructure.dll
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Release\Microsoft.Management.Infrastructure.Native.dll
+C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Release\PSScriptsExecuter.csprojAssemblyReference.cache
+C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Release\PSScriptsExecuter.csproj.CoreCompileInputs.cache
+C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Release\PSScriptsExecuter.csproj.CopyComplete
+C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Release\PSScriptsExecuter.exe
+C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Release\PSScriptsExecuter.pdb

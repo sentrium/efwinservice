@@ -8,3 +8,12 @@ C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csproj.Cor
 C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.exe
 C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.pdb
 C:\Repos\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csprojAssemblyReference.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.exe.config
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.exe
+C:\GitRepositories\efwinservice\ConfigurationTool\bin\Release\ConfigurationTool.pdb
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.ConfigurationUI.resources
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.Properties.Resources.resources
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csproj.GenerateResource.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.csproj.CoreCompileInputs.cache
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.exe
+C:\GitRepositories\efwinservice\ConfigurationTool\obj\Release\ConfigurationTool.pdb

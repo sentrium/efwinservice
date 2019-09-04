@@ -109,7 +109,7 @@ namespace LogonEventsWatcherService
                 }
 
                 Logger.Log.Info("Sender. Perform http request with payload: " + json);
-
+                
                 var response = request.GetResponse();
                 using (var streamReader = new StreamReader(response.GetResponseStream()))
                 {
@@ -119,7 +119,29 @@ namespace LogonEventsWatcherService
             }
             catch(Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                if (ex is WebException)
+                {
+                    var exception = ex as WebException;
+
+                    if(exception.Response != null)
+                    {
+                        var exceptionResponse = new StreamReader(exception.Response.GetResponseStream()).ReadToEnd();
+
+                        Logger.Log.Error("Response Body" + ": " + exceptionResponse);
+                    }
+                }
+                
+                //Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+
+                Exception Exception = ex;
+
+                while (Exception != null)
+                {
+                    Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + Exception.Message);
+
+                    Exception = Exception.InnerException;
+                }
+
             }
         }
     }

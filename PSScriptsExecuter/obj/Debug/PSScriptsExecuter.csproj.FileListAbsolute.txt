@@ -25,3 +25,5 @@ C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.cs
 C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.exe
 C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.pdb
 C:\GitRepositories\efwinservice\PSScriptsExecuter\obj\Debug\PSScriptsExecuter.csprojAssemblyReference.cache
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Debug\Microsoft.Management.Infrastructure.dll
+C:\GitRepositories\efwinservice\PSScriptsExecuter\bin\Debug\Microsoft.Management.Infrastructure.Native.dll
