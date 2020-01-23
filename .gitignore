@@ -2,3 +2,4 @@
 LogonEventsWatcherService/bin/
 LogonEventsWatcherService/obj/
 packages/
+/Console.Test

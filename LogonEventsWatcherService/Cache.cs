@@ -11,9 +11,9 @@ namespace LogonEventsWatcherService
 {
     public static class Cache
     {
-        public static Dictionary<String, UserData> UserData { get; private set; } = new Dictionary<string, UserData>();
+        public static Dictionary<String, UserData> UserData { get; private set; } = new Dictionary<string, UserData>(StringComparer.InvariantCultureIgnoreCase);
 
-        public static Dictionary<String, ComputerData> ComputerData { get; private set; } = new Dictionary<string, ComputerData>();
+        public static Dictionary<String, ComputerData> ComputerData { get; private set; } = new Dictionary<string, ComputerData>(StringComparer.InvariantCultureIgnoreCase);
         
 
         public static void Serialize()

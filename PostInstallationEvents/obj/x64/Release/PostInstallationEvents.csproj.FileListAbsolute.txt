@@ -1,0 +1,7 @@
+C:\GitRepositories\efwinservice\PostInstallationEvents\bin\x64\Release\PostInstallationEvents.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\bin\x64\Release\PostInstallationEvents.pdb
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\x64\Release\Interop.NetFwTypeLib.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\x64\Release\PostInstallationEvents.csproj.ResolveComReference.cache
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\x64\Release\PostInstallationEvents.csproj.CoreCompileInputs.cache
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\x64\Release\PostInstallationEvents.dll
+C:\GitRepositories\efwinservice\PostInstallationEvents\obj\x64\Release\PostInstallationEvents.pdb

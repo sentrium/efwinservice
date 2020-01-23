@@ -148,7 +148,7 @@ namespace LogonEventsWatcherService
                             Logger.Log.Info($"Updater. Add new computer data for computer: {computerName}");
                         }
                         Cache.ComputerData[computerName].ComputerName = computerName;
-                        Cache.ComputerData[computerName].Mac = mac;
+                        Cache.ComputerData[computerName].Mac = mac.Replace(":", string.Empty).ToLowerInvariant();
                     }
                 }
             }

@@ -48,8 +48,8 @@ namespace LogonEventsWatcherService
                 EventData eventData = Queue.Dequeue();
                 if (eventData != null)
                 {
-                    String logString = String.Format("Sender. Dequeue event code: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
-                        eventData.EventCode, eventData.AccountName,eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
+                    String logString = String.Format("Sender. Dequeue action: {0}, username: {1}, computer: {2}, domain: {3}, time: {4}",
+                        eventData.ActionName, eventData.AccountName,eventData.ComputerName, eventData.DomainName, eventData.TimeGenerated.ToString());
                     Logger.Log.Info(logString);
                     Logger.Log.Info("Sender. Queue count: " + Queue.Count.ToString());
 
@@ -79,7 +79,7 @@ namespace LogonEventsWatcherService
                 var requestData = new RequestData()
                 {
                     ID = Guid.NewGuid().ToString(),
-                    Type = eventData.EventCode == Constants.LogonEventCode ?
+                    Type = eventData.ActionName.Equals("logon",StringComparison.InvariantCultureIgnoreCase) ?
                         Constants.AdUserLogin : Constants.AdUserLogout,
                     TimeStamp = (eventData.TimeGenerated.ToUniversalTime().Subtract(new DateTime(1970, 1, 1))).TotalSeconds,
                     
@@ -109,7 +109,7 @@ namespace LogonEventsWatcherService
                 }
 
                 Logger.Log.Info("Sender. Perform http request with payload: " + json);
-
+                
                 var response = request.GetResponse();
                 using (var streamReader = new StreamReader(response.GetResponseStream()))
                 {
@@ -119,7 +119,29 @@ namespace LogonEventsWatcherService
             }
             catch(Exception ex)
             {
-                Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+                if (ex is WebException)
+                {
+                    var exception = ex as WebException;
+
+                    if(exception.Response != null)
+                    {
+                        var exceptionResponse = new StreamReader(exception.Response.GetResponseStream()).ReadToEnd();
+
+                        Logger.Log.Error("Response Body" + ": " + exceptionResponse);
+                    }
+                }
+                
+                //Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + ex.Message);
+
+                Exception Exception = ex;
+
+                while (Exception != null)
+                {
+                    Logger.Log.Error(Utils.FormatStackTrace(new StackTrace()) + ": " + Exception.Message);
+
+                    Exception = Exception.InnerException;
+                }
+
             }
         }
     }
